@@ -7,11 +7,21 @@ html,body{
 }
 
 .container{
-    position:fixed;
-    right: -883px;
-    width:883px;
+    position:fixed; 
+    right: -924px; 
+    width:924px;
     height:100%;
     display:flex;
+    transition: all 1s ease-in-out;
+}
+.show{
+    position:fixed;
+    right:0;
+}
+.show-button{
+    position:absolute;
+    top: 0px;
+    right:0px;
 }
 
 .aside{
@@ -57,26 +67,67 @@ html,body{
     display:flex;
 }
 
+.paragraph{
+    width: 570px;
+}
 .article{
     margin-left:33.5px;
+    overflow-y: auto;
 }
 .article p {
     font-size:20px;
     line-height:25px;
-    margin-bottom:33px;
+    margin-bottom:20px;
 }
 .main h1{
     line-height: 30px;
-    margin-top:43px;
+    margin-top:35px;
     font-size:38px;
 }
 .video{
     width:570px;
-    margin-bottom:193px;
+    
 }
 
 .form{
+    margin-top:193px;
     text-align:center;
+    display:none; 
+}
+.form-submit{
+    display:none;
+}
+.form-submit h1{
+    margin: 28px 0px 20px 0px;
+    font-size: 30px;
+}
+.form-submit input{
+    height: 49px;
+    width:567px;
+}
+
+.form-submit textarea{
+    margin: 15px 0;
+    height:198px;
+    width: 567px;
+    resize:none;
+}
+.form-submit button{
+    display:block;
+    height:48px;
+    width:567px;
+    background: #02cf01;
+    color:#ffffff;
+    font-size:20px;
+    cursor:pointer;
+}
+.form button{
+    color:#4add49;
+    border:none;
+    background: #eafbe9;
+    padding: 16px 58px;
+    border-radius: 25px 25px;
+    cursor:pointer;
 }
 .form h2{
     font-weight:bold;
@@ -89,4 +140,31 @@ html,body{
     font-size:30px;
     cursor:pointer;
 }
+
+.fa-times{
+    width:43px;
+    height:41px;
+    background:#fa7e7c;
+    text-align:center;
+    line-height: 40px;
+    color: #ffffff;
+    cursor:pointer;
+}
+
+.setUpPages, .setUpShop,
+.blocksSidebars, .setUpShop,
+.staticBlocks, .navigation,
+.themeOptions, .visualComposer,
+.troubleShooting, .customisations,
+.faq{
+    display:none
+}
+
+.showParagraph{
+    display:block;
+}
+.hideParagraph{
+   display:none;
+}
+
 
