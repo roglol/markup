@@ -17,39 +17,19 @@
 
 <div class="aside">
 <nav>
-     <ul>
+         <ul>
         <li><button id="gettingStarted" class="button">Getting Started</button></li>
-    </ul>
-    <ul>
         <li><button id="setUpPages" class="button">Set Up Pages</button></li>
-    </ul>
-    <ul>
         <li><button id="blocksSidebars" class="button">Blocks &amp; Sidebars</button></li>
-    </ul>
-    <ul>
         <li><button id="setUpShop" class="button">Set Up Shop</button></li>
-    </ul>
-    <ul>
         <li><button id="staticBlocks" class="button">Static Blocks</button></li>
-    </ul>
-    <ul>
         <li><button id="navigation" class="button">Navigation</button></li>
-    </ul>
-    <ul>
         <li><button id="themeOptions" class="button">Theme Options</button></li>
-    </ul>
-    <ul>
         <li><button id="visualComposer" class="button">Visual Composer Elements</button></li>
-    </ul>
-    <ul>
         <li><button id="troubleShooting" class="button">TroubleShooting</button></li>
-    </ul>
-    <ul>
         <li><button id="customisations" class="button">Customisations</button></li>
-    </ul>
-    <ul>
         <li><button id='faq' class="button">FAQ</button></li>
-    </ul> 
+    </ul>
 </nav>
 
 </div>
@@ -143,9 +123,9 @@
             </div>
             <div class="form">
                     <h2>Not quite what you are lookig for?</h2> 
-                    <button>Get Help</button>
+                    <button class="form-button">Get Help</button>
             </div>
-            <div class="form-submit">
+            <div class="form-submit hide-form">
         <h1>Submit a request</h1>
         <input type="text" name="fname"  placeholder="Subject">
         <textarea rows="4" cols="50" placeholder="Trouble with...">
@@ -160,7 +140,10 @@
         <script>
         const button = document.querySelector('.fa-align-justify')
         const button1 = document.querySelector('.fa-times')
+        const formButton = document.querySelector('.form-button')
         const container = document.querySelector('.container')
+        const submitForm = document.querySelector('.form-submit')
+        const form = document.querySelector('.form')
         button.addEventListener('click',()=>{
             container.classList.add('show')
             button.style.display = "none"
@@ -181,6 +164,11 @@
             paragraph.classList.remove('hideParagraph')
             paragraph.classList.add('showParagraph')
             })
+        })
+        formButton.addEventListener('click', ()=>{
+            submitForm.classList.remove('hide-form')
+              submitForm.classList.add('show-form')
+              form.classList.add('hide-form')
         })
         </script>
 </body>
